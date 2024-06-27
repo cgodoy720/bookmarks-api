@@ -2,12 +2,16 @@ const express = require('express')
 // Imports the bookmark controller
 const bookmarksController = require('./controllers/bookmarksController')
 const petsController = require('./controllers/petsController')
+const cors = require('cors')
 
 // Create an instance of the express server
 const app = express()
 
 
 // Middleware
+app.use(cors())
+
+
 // express.json() tells our app to accept incoming JSON from requests (POST and PUT)
 app.use(express.json())
 
